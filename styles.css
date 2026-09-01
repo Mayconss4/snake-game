@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EEF;
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    background-color: #FFF;
+}
+
+header {
+    background-color: #2A6;
+    color: #FFF;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+footer {
+    background-color: #2A6;
+    color: #FFF;
+    padding: 20px;
+}
+
+.placar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-gap: 1px;
+    margin: 10px auto;
+    padding: 5px;
+    justify-content: center;
+    background-color: #333;
+    width: max-content;
+}
+
+.celula {
+    width: 20px;
+    height: 20px;
+    background-color: #444;
+}
+
+.corpo {
+    background-color: #2A6;
+    border-radius: 4px;
+}
+
+.cabeca {
+    background-color: #5D9;
+    border-radius: 6px;
+}
+
+.comida {
+    background-color: #E44;
+    border-radius: 50%;
+}
+
+.mensagem {
+    font-weight: bold;
+    color: #226;
+    min-height: 20px;
+}
+
+.controles {
+    margin: 10px;
+}
+
+button {
+    background-color: #2A6;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 3px;
+}
+
+button:hover {
+    background-color: #185;
+}
+
+select {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 12px;
+    margin: 3px;
+}
+
+.setas button {
+    width: 60px;
+}
+
+.regras {
+    display: inline-block;
+    text-align: left;
+    max-width: 500px;
+}
+
+@media (max-width: 520px) {
+    .tabuleiro {
+        grid-template-columns: repeat(20, 14px);
+    }
+
+    .celula {
+        width: 14px;
+        height: 14px;
+    }
+
+    .placar {
+        display: block;
+    }
+}

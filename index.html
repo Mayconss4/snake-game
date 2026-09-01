@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jogo da Cobrinha</title>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="conteiner">
+            <header>
+                <h1>Jogo da Cobrinha</h1>
+                <p>GAC116 - Programação Web</p>
+            </header>
+
+            <p>
+                Guie a cobrinha pelo tabuleiro, colete as maçãs e alcance a meta
+                sem bater na parede ou no próprio corpo.
+            </p>
+
+            <div class="placar">
+                <p>Pontos: <span id="pontos">0</span></p>
+                <p>Maçãs: <span id="frutas">0/20</span></p>
+                <p>Recorde: <span id="recorde">0</span></p>
+            </div>
+
+            <div id="tabuleiro" class="tabuleiro"></div>
+
+            <p id="mensagem" class="mensagem">Escolha a dificuldade e clique em Iniciar Jogo.</p>
+
+            <div class="controles">
+                <label for="dificuldade">Dificuldade:</label>
+                <select id="dificuldade" onchange="mudarDificuldade()">
+                    <option value="facil">Fácil (15 maçãs)</option>
+                    <option value="medio" selected>Médio (20 maçãs)</option>
+                    <option value="dificil">Difícil (25 maçãs)</option>
+                </select>
+                <button onclick="iniciarJogo()">Iniciar Jogo</button>
+                <button id="botaoPausar" onclick="pausarJogo()">Pausar</button>
+                <button onclick="reiniciarJogo()">Reiniciar</button>
+            </div>
+
+            <div class="setas">
+                <button onclick="mudarDirecao('cima')">&#9650;</button>
+                <br>
+                <button onclick="mudarDirecao('esquerda')">&#9664;</button>
+                <button onclick="mudarDirecao('baixo')">&#9660;</button>
+                <button onclick="mudarDirecao('direita')">&#9654;</button>
+            </div>
+
+            <hr>
+
+            <h2>Regras do Jogo</h2>
+            <ul class="regras">
+                <li>A cobrinha anda sozinha e nunca para.</li>
+                <li>Cada maçã vale 10 pontos e aumenta o corpo em um quadradinho.</li>
+                <li>A cada 5 maçãs a cobrinha fica mais rápida.</li>
+                <li>Você perde se bater na parede ou no próprio corpo.</li>
+                <li>Você vence ao comer a quantidade de maçãs da dificuldade escolhida.</li>
+                <li>Não é possível virar 180 graus de uma só vez.</li>
+            </ul>
+
+            <h2>Controles</h2>
+            <ul class="regras">
+                <li>Setas do teclado ou teclas W, A, S e D para mover a cobrinha.</li>
+                <li>Barra de espaço para pausar e continuar.</li>
+                <li>No celular use os botões com as setas.</li>
+            </ul>
+
+            <footer>
+                <p><b>Desenvolvido por:</b> Maycon Henrique Soares de Sousa - Turma 14A</p>
+                <p><b>Licença:</b> MIT - 2026</p>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
